@@ -1,36 +1,39 @@
-//complete this code
+// Person class
 class Person {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-    get name() {
-        return this.name;
-    }
-    set name(newName) {
-        this.name = newName;
-    }
-    get age() {
-        return this.age;
-    }
-    set age(newAge) {
-        this.age = newAge;
-    }
+  constructor(name, age) {
+    this._name = name;
+    this._age = age;
+  }
+
+  // getter & setter for name
+  get name() {
+    return this._name;
+  }
+
+  set name(newName) {
+    this._name = newName;
+  }
+
+  // getter & setter for age
+  get age() {
+    return this._age;
+  }
+
+  set age(newAge) {
+    this._age = newAge;
+  }
 }
 
+// Student class inheriting from Person
 class Student extends Person {
-    study() {
-        console.log(`${this.name} is studying`);
-    }
+  study() {
+    console.log(${this.name} is studying);
+  }
 }
 
+// Teacher class inheriting from Person
 class Teacher extends Person {
-    teach() {
-        console.log(`${this.name} is teaching`);
-    }
+  teach() {
+    console.log(${this.name} is teaching);
+  }
 }
-
-// Do not change the code below this line
-window.Person = Person;
-window.Student = Student;
-window.Teacher = Teacher;
